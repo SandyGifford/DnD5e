@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Endpoints and typing for the DnD 5e API",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w"
