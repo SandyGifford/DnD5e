@@ -262,3 +262,4 @@ declare module DnD5e {
     function magicSchools(): Promise<NamedAPIResourceList<MagicSchoolName>>;
     function magicSchools(index: number): Promise<MagicSchool>;
 }
+export default DnD5e;

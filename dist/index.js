@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var DnD5e;
 (function (DnD5e) {
     function abilityScores(index) {
@@ -77,4 +78,4 @@ var DnD5e;
     }
     DnD5e.magicSchools = magicSchools;
 })(DnD5e || (DnD5e = {}));
-module.exports = DnD5e;
+exports.default = DnD5e;

@@ -379,4 +379,4 @@ module DnD5e {
 	}
 }
 
-module.exports = DnD5e;
+export default DnD5e;
