@@ -1,0 +1,19 @@
+{
+  "name": "dnd5e",
+  "version": "1.0.0",
+  "description": "Endpoints and typing for the DnD 5e API",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "Sandy Gifford <sandyDoesNPM@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node-fetch": "^2.1.7",
+    "typescript": "^3.4.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}
