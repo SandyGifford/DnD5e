@@ -379,4 +379,6 @@ module DnD5e {
 	}
 }
 
-export default DnD5e;
+declare module "dnd5e" {
+	export = DnD5e;
+}
