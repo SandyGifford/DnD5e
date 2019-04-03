@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "es6",
+		"target": "es5",
 		"module": "commonjs",
 		"noUnusedLocals": true,
 		"noImplicitReturns": true,
@@ -8,8 +8,6 @@
 		"noImplicitAny": true,
 		"esModuleInterop": true,
 		"alwaysStrict": true,
-		"jsx": "react",
-		"outDir": "./dist",
 		"declaration": true,
 	}
 }

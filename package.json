@@ -12,8 +12,8 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
-    "node-fetch": "^2.3.0",
-    "@types/node-fetch": "^2.1.7",
-    "typescript": "^3.4.1"
+    "node-fetch": "latest",
+    "@types/node-fetch": "latest",
+    "typescript": "latest"
   }
 }
