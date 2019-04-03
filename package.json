@@ -12,8 +12,10 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
-    "node-fetch": "latest",
+    "@types/express": "latest",
     "@types/node-fetch": "latest",
+    "express": "latest",
+    "node-fetch": "latest",
     "typescript": "latest"
   }
 }
