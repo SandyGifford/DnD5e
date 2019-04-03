@@ -67,4 +67,4 @@ var Endpoints = /** @class */ (function () {
     };
     return Endpoints;
 }());
-exports.default = Endpoints;
+exports.Endpoints = Endpoints;

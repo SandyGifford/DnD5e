@@ -40,7 +40,7 @@ export interface ResponseLike {
 }
 export type FetchLike = (input: string) => Promise<ResponseLike>;
 
-export default class Endpoints {
+export class Endpoints {
 	constructor(private fetchFunc: FetchLike, private urlBase: string) {}
 
 	public abilityScores(): Promise<NamedAPIResourceList<AbilityScoreName>>;

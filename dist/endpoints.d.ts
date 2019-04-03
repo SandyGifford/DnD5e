@@ -3,7 +3,7 @@ export interface ResponseLike {
     json(): Promise<any>;
 }
 export declare type FetchLike = (input: string) => Promise<ResponseLike>;
-export default class Endpoints {
+export declare class Endpoints {
     private fetchFunc;
     private urlBase;
     constructor(fetchFunc: FetchLike, urlBase: string);
