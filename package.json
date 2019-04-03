@@ -10,8 +10,8 @@
   },
   "author": "Sandy Gifford <sandyDoesNPM@gmail.com>",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "typescript": "latest"
-  }
+  },
+  "dependencies": {}
 }
