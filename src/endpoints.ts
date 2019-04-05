@@ -32,9 +32,6 @@ import {
 	EquipmentName
 } from "./typings";
 
-// server urlBase: "http://www.dnd5eapi.co/api"
-// client urlBase: "/dnd5e"
-
 export interface ResponseLike {
 	json(): Promise<any>;
 }
@@ -49,7 +46,7 @@ export class Endpoints {
 	 */
 	public abilityScores(): Promise<NamedAPIResourceList<AbilityScoreName>>;
 	/**
-	 * Gets a specified ability score
+	 * Gets a specified ability score by index
 	 * @param index The index of the ability score (as it appears in the response from `abilityScores()`)
 	 * @returns An `AbilityScore` object representing the requested ability score
 	 */
@@ -66,7 +63,7 @@ export class Endpoints {
 	 */
 	public skills(): Promise<NamedAPIResourceList<SkillName>>;
 	/**
-	 * Gets a specified skill
+	 * Gets a specified skill by index
 	 * @param index The index of the skill (as it appears in the response from `skills()`)
 	 * @returns A `Skill` object representing the requested skill
 	 */
@@ -83,7 +80,7 @@ export class Endpoints {
 	 */
 	public proficiencies(): Promise<NamedAPIResourceList<ProficiencyName>>;
 	/**
-	 * Gets a specified proficiency
+	 * Gets a specified proficiency by index
 	 * @param index The index of the proficiency (as it appears in the response from `proficiencies()`)
 	 * @returns A `Proficiency` object representing the requested proficiency
 	 */
@@ -101,7 +98,7 @@ export class Endpoints {
 	 */
 	public languages(): Promise<NamedAPIResourceList<LanguageName>>;
 	/**
-	 * Gets a specified language
+	 * Gets a specified language by index
 	 * @param index The index of the language (as it appears in the response from `languages()`)
 	 * @returns A `Language` object representing the requested language
 	 */
@@ -118,7 +115,7 @@ export class Endpoints {
 	 */
 	public classes(): Promise<NamedAPIResourceList<ClassName>>;
 	/**
-	 * Gets a specified character class type
+	 * Gets a specified character class type by index
 	 * @param index The index of the character class type (as it appears in the response from `classes()`)
 	 * @returns A `CharClass` object representing the requested character class type
 	 */
@@ -137,7 +134,7 @@ export class Endpoints {
 	 */
 	public subClasses(): Promise<NamedAPIResourceList<SubClassName>>;
 	/**
-	 * Gets a specified character sub-class type
+	 * Gets a specified character sub-class type by index
 	 * @param index The index of the character sub-class type (as it appears in the response from `subClasses()`)
 	 * @returns A `CharSubClass` object representing the requested character sub-class type
 	 */
@@ -155,7 +152,7 @@ export class Endpoints {
 	 */
 	public features(): Promise<NamedAPIResourceList<FeatureName>>;
 	/**
-	 * Gets a specified feature type
+	 * Gets a specified feature type by index
 	 * @param index The index of the feature type (as it appears in the response from `features()`)
 	 * @returns A `Feature` object representing the requested feature type
 	 */
@@ -183,7 +180,7 @@ export class Endpoints {
 	 */
 	public races(): Promise<NamedAPIResourceList<RaceName>>;
 	/**
-	 * Gets a specified character race
+	 * Gets a specified character race by index
 	 * @param index The index of the character race (as it appears in the response from `races()`)
 	 * @returns A `Race` object representing the requested character race
 	 */
@@ -200,7 +197,7 @@ export class Endpoints {
 	 */
 	public subRaces(): Promise<NamedAPIResourceList<SubRaceName>>;
 	/**
-	 * Gets a specified character sub-race
+	 * Gets a specified character sub-race by index
 	 * @param index The index of the character sub-race (as it appears in the response from `subRaces()`)
 	 * @returns A `SubRace` object representing the requested character sub-race
 	 */
@@ -218,7 +215,7 @@ export class Endpoints {
 	 */
 	public traits(): Promise<NamedAPIResourceList<TraitName>>;
 	/**
-	 * Gets a specified trait
+	 * Gets a specified trait by index
 	 * @param index The index of the trait (as it appears in the response from `traits()`)
 	 * @returns A `Trait` object representing the requested trait
 	 */
@@ -235,7 +232,7 @@ export class Endpoints {
 	 */
 	public equipment(): Promise<NamedAPIResourceList<EquipmentName>>;
 	/**
-	 * Gets a specified equipment
+	 * Gets a specified equipment by index
 	 * @param index The index of the equipment (as it appears in the response from `equipment()`)
 	 * @returns An `Equipment` object representing the requested equipment
 	 */
@@ -252,7 +249,7 @@ export class Endpoints {
 	 */
 	public conditions(): Promise<NamedAPIResourceList<ConditionName>>;
 	/**
-	 * Gets a specified character condition
+	 * Gets a specified character condition by index
 	 * @param index The index of the character condition (as it appears in the response from `conditions()`)
 	 * @returns A `Condition` object representing the requested character condition
 	 */
@@ -269,7 +266,7 @@ export class Endpoints {
 	 */
 	public damageTypes(): Promise<NamedAPIResourceList<DamageTypeName>>;
 	/**
-	 * Gets a specified damage type
+	 * Gets a specified damage type by index
 	 * @param index The index of the damage type (as it appears in the response from `damageTypes()`)
 	 * @returns A `DamageType` object representing the requested damage type
 	 */
@@ -286,7 +283,7 @@ export class Endpoints {
 	 */
 	public magicSchools(): Promise<NamedAPIResourceList<MagicSchoolName>>;
 	/**
-	 * Gets a specified magic school
+	 * Gets a specified magic school by index
 	 * @param index The index of the magic school (as it appears in the response from `magicSchools()`)
 	 * @returns A `MagicSchool` object representing the requested magic school
 	 */
