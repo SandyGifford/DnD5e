@@ -85,7 +85,12 @@ export class Endpoints {
 	 * @returns A `Proficiency` object representing the requested proficiency
 	 */
 	public proficiencies(index: number): Promise<Proficiency>;
-	public proficiencies(className: ClassName): Promise<Proficiency>;
+	/**
+	 * Gets all proficiencies for a given class name
+	 * @param className The class name to get proficiencies for
+	 * @returns A promise that resolves to a `NamedAPIResourceList` containing all proficiencies
+	 */
+	public proficiencies(className: ClassName): Promise<NamedAPIResourceList<ProficiencyName>>;
 	public proficiencies(indexer?: number | ClassName): Promise<any> {
 		return this.fetchFunc(`${this.urlBase}/proficiencies/${typeof indexer !== "undefined" ? indexer : ""}`)
 			.then(r => r.json());
@@ -120,8 +125,14 @@ export class Endpoints {
 	 * @returns A `CharClass` object representing the requested character class type
 	 */
 	public classes(index: number): Promise<CharClass>;
+	/**
+	 * Gets a specified character class type
+	 * @param className The name of the class
+	 * @returns A `CharClass` object representing the requested character class type
+	 */
 	public classes(className: ClassName): Promise<CharClass>;
 	public classes(indexer?: number | ClassName): Promise<any> {
+		if (typeof indexer === "string") indexer = indexer.toLowerCase() as ClassName;
 		return this.fetchFunc(`${this.urlBase}/classes/${typeof indexer !== "undefined" ? indexer : ""}`)
 			.then(r => r.json());
 	}
@@ -139,6 +150,11 @@ export class Endpoints {
 	 * @returns A `CharSubClass` object representing the requested character sub-class type
 	 */
 	public subClasses(index: number): Promise<CharSubClass>;
+	/**
+	 * Gets a specified character sub-class type
+	 * @param className The name of the sub-class
+	 * @returns A `CharSubClass` object representing the requested character sub-class type
+	 */
 	public subClasses(className: ClassName): Promise<CharSubClass>;
 	public subClasses(indexer?: number | ClassName): Promise<any> {
 		return this.fetchFunc(`${this.urlBase}/subclasses/${typeof indexer !== "undefined" ? indexer : ""}`)
@@ -202,7 +218,6 @@ export class Endpoints {
 	 * @returns A `SubRace` object representing the requested character sub-race
 	 */
 	public subRaces(index: number): Promise<SubRace>;
-	public subRaces(race: RaceName): Promise<SubRace>;
 	public subRaces(indexer?: any): Promise<any> {
 		return this.fetchFunc(`${this.urlBase}/subraces/${typeof indexer !== "undefined" ? indexer : ""}`)
 			.then(r => r.json());
