@@ -22,6 +22,8 @@ var Endpoints = /** @class */ (function () {
             .then(function (r) { return r.json(); });
     };
     Endpoints.prototype.classes = function (indexer) {
+        if (typeof indexer === "string")
+            indexer = indexer.toLowerCase();
         return this.fetchFunc(this.urlBase + "/classes/" + (typeof indexer !== "undefined" ? indexer : ""))
             .then(function (r) { return r.json(); });
     };
@@ -33,6 +35,12 @@ var Endpoints = /** @class */ (function () {
         return this.fetchFunc(this.urlBase + "/features/" + (typeof index !== "undefined" ? index : ""))
             .then(function (r) { return r.json(); });
     };
+    /**
+     * Gets information about a class at a certain level
+     * @param className The name of the class
+     * @param level The level (1-20)
+     * @returns A promise which resolves to a `ClassLevel` object detailing that level
+     */
     Endpoints.prototype.classLevel = function (className, level) {
         return this.fetchFunc(this.urlBase + "/classes/" + className + "/level/" + level)
             .then(function (r) { return r.json(); });
